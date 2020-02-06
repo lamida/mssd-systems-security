@@ -1,4 +1,6 @@
-# Introduction to systems security
+# Introduction to Systems Security
+
+Date: 20200205
 
 What is system? Elements that interact with each other. Why we need systems security and why it is important? Because systems are everywhere. Most systems contains multiple stacks, layers, languages, implementations, Oses, hardwares and all interacting together. Systems are also difficult to maintain, manage and integrate. Systems also mostly build in different times. Many systems have unknowns because of this. We call it legacy systems. Systems that is running but when something not right happens, it is very difficult to find out the problems. It is really fragile.
 
