@@ -51,3 +51,10 @@ In unix process can be created and killed. New process will get the same uid. To
 In unix networking a process can listen to a port. Port is logical network in transport layer of network (are yousure?). Only uid=0 can bind to ports < 1024. But anyone can connect to any port. One can only read/write to the owned socket. Root is required to send raw packets. TODO: what is sending raw packets? 
 
 Some additional information. Setuid biunaries /biun/passwd is used to update /etc/passwd password. But how non root can update their password if /etc/passwd can be only updated by root? There is also security realted issues such as bugs and LD_PRELOADED. TODO: follow up this. In unix there is chroot command to change the root directory. TODO: for what is this is used? Docker will be on of it. Beside root, there is also needed a fine grained control. Last Unix by default using discretionary access control. Which mean the access control is defined by users. Alternative access control is mandatory access control that provides what to access in OS level. In Linux it is defined in SELinux. TODO: DAC vs MAC. Write also about SELinux.
+
+# Reading List (TODO: publish the summary here):
+* [And] chapters 4.1: Access control introduction, 4.2: Operating System Access Controls, and 8.5: Future Multi Level Security Systems 
+* [BSS] chapters 1: Security Principles and 4: Authentication and Access Control
+* [Sho] chapters 1: Dive In and Threat Model! and 2: Strategies for Threat Modeling
+
+Homework Questions Link: https://github.com/pszal/teaching/blob/master/2020_51.502-Systems-Security/1_Homework.md
