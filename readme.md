@@ -1,6 +1,6 @@
 # 51.502 Systems Security
 
-This is repository for lecture notes and relevant learning materials for [Systems Security course](https://istd.sutd.edu.sg/graduate/courses/system-security) that I take as part of [Master Security in Security by Design (MSSD)](https://istd.sutd.edu.sg/education/mssd/) in [Singapore University of Techology and Design](https://www.sutd.edu.sg/). The instructor of this module is [Paweł Szałachowski](https://pszal.github.io/).
+This is repository for lecture notes and relevant learning materials for [Systems Security](https://istd.sutd.edu.sg/graduate/courses/system-security) course that I take as part of [Master Security in Security by Design (MSSD)](https://istd.sutd.edu.sg/education/mssd/) in [Singapore University of Techology and Design](https://www.sutd.edu.sg/). The instructor of this module is [Paweł Szałachowski](https://pszal.github.io/).
 
 Please note that there will not be any homework answer uploaded here.
 
@@ -13,6 +13,8 @@ Concrete chapters to read will be given at the end of every lecture.
 * [Sch] Schneier, Bruce. Applied Cryptography: Protocols, Algorithms, and Source Code in C. John Wiley & Sons, 1996
 * [Sho] Adam Shostack "Threat modeling: designing for security", Wiley, 2014
 * [Sta] Mark Stamp, Information Security: Principles and Practice, John Wiley & and Sons, 2006
+
+As a book hoarder and also security enthusiast, I owned all the books above :stuck_out_tongue:.
 
 Lecture Notes:
 * [Week 01](week01.md)
