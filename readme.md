@@ -1,4 +1,8 @@
-This is repository for lecture notes and relevant learning materials for Systems Security course that I take as part of Master Security in Security by Design (MSSD) in Singapore University of Techology and Design. Please note that there will not be any homework answer uploaded here.
+# 51.502 Systems Security
+
+This is repository for lecture notes and relevant learning materials for [Systems Security course](https://istd.sutd.edu.sg/graduate/courses/system-security) that I take as part of [Master Security in Security by Design (MSSD)](https://istd.sutd.edu.sg/education/mssd/) in [Singapore University of Techology and Design](https://www.sutd.edu.sg/). The instructor of this module is [Paweł Szałachowski](https://pszal.github.io/).
+
+Please note that there will not be any homework answer uploaded here.
 
 Reading List:
 Concrete chapters to read will be given at the end of every lecture.
