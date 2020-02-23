@@ -119,3 +119,5 @@ Hello jon
 0xb7e394e3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
 (gdb)
 ```
+
+TBC: get stack frame info
