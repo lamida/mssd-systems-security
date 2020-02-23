@@ -181,7 +181,27 @@ To inspect stack frame, we can use these commands:
 * info args: info about arguments
 * info locals: info about local variables
 
-To demonstrate stack frame inspection, let's restart the gdb session and set breakpoint in the first line of printMessage function (line 4):
+To demonstrate stack frame inspection, let's restart the gdb session and set breakpoint in the printMessage function:
 ```
+(gdb) break printMessage
+Breakpoint 1 at 0x804843a: file hello.c, line 4.
+(gdb) run
+Starting program: /home/lamida/ss/a.out 
 
+Breakpoint 1, printMessage (msg=0xbffff334 "jon") at hello.c:4
+4	  printf("Hello %s\n", msg);
+(gdb) info frame
+Stack level 0, frame at 0xbffff320:
+ eip = 0x804843a in printMessage (hello.c:4); saved eip 0x8048479
+ called by frame at 0xbffff350
+ source language c.
+ Arglist at 0xbffff318, args: msg=0xbffff334 "jon"
+ Locals at 0xbffff318, Previous frame's sp is 0xbffff320
+ Saved registers:
+  ebp at 0xbffff318, eip at 0xbffff31c
+(gdb) info args
+msg = 0xbffff334 "jon"
+(gdb) info locals
+No locals.
+(gdb)
 ```
