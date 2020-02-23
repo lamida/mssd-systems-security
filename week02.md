@@ -51,9 +51,15 @@ Source code:
 # hello.c
 #include<stdio.h>
 
-int main() {
-  char msg[4] = "jon";
+void printMessage(char msg[]) {
   printf("Hello %s\n", msg);
+}
+
+int main() {
+  char msg[] = "jon";
+  printMessage(msg);
+  char goodbye[] = "bye";
+  printf("Program is completed, %s\n", goodbye);
 }
 ```
 
@@ -78,19 +84,20 @@ The most obvious command in gdb is to just run the probram by typing run:
 (gdb) run
 Starting program: /home/lamida/ss/a.out 
 Hello jon
-[Inferior 1 (process 2702) exited with code 012]
+Program is completed, bye
+[Inferior 1 (process 2781) exited with code 032]
 (gdb) 
 ```
 
 To set a break point use break with file name and line argument. If we run the program again it will stop in that break point:
 ```
-(gdb) break hello.c:4
-Breakpoint 1 at 0x8048449: file hello.c, line 4.
+(gdb) break hello.c:8
+Breakpoint 1 at 0x8048465: file hello.c, line 8.
 (gdb) run
 Starting program: /home/lamida/ss/a.out 
 
-Breakpoint 1, main () at hello.c:4
-4	  char msg[4] = "jon";
+Breakpoint 1, main () at hello.c:8
+8	  char msg[] = "jon";
 (gdb)
 ```
 
@@ -99,7 +106,8 @@ We can either continue:
 (gdb) continue
 Continuing.
 Hello jon
-[Inferior 1 (process 2706) exited with code 012]
+Program is completed, bye
+[Inferior 1 (process 2849) exited with code 032]
 (gdb)
 ```
 
@@ -108,16 +116,72 @@ Or step (we need to run the program again):
 (gdb) run
 Starting program: /home/lamida/ss/a.out 
 
-Breakpoint 1, main () at hello.c:4
-4	  char msg[4] = "jon";
+Breakpoint 1, main () at hello.c:8
+8	  char msg[] = "jon";
 (gdb) step
-5	  printf("Hello %s\n", msg);
+9	  printMessage(msg);
+(gdb) step
+printMessage (msg=0xbffff334 "jon") at hello.c:4
+4	  printf("Hello %s\n", msg);
 (gdb) step
 Hello jon
-6	}
+5	}
+(gdb) step
+main () at hello.c:10
+10	  char goodbye[] = "bye";
+(gdb) step
+11	  printf("Program is completed, %s\n", goodbye);
+(gdb) step
+Program is completed, bye
+12	}
 (gdb) step
 0xb7e394e3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
 (gdb)
 ```
 
-TBC: get stack frame info
+Alternatively, we also can set breakpoint using filename and function name:
+```
+(gdb) break hello.c:printMessage
+Breakpoint 3 at 0x804843a: file hello.c, line 4.
+(gdb)
+```
+
+Or just function name:
+```
+(gdb) break printMessage
+Breakpoint 4 at 0x804843a: file hello.c, line 4.
+(gdb)
+```
+
+To delete breakpoint, we can use clear command and the argument that we use to set the breakpoint, e.g. either of filename:line, filename:function, function.
+```
+(gdb) clear printMessage
+Deleted breakpoints 4 5 
+(gdb)
+```
+
+With breakpoint set we can inspect variables value during breakpoint using print.
+```
+(gdb) run
+Starting program: /home/lamida/ss/a.out 
+
+Breakpoint 1, main () at hello.c:8
+8	  char msg[] = "jon";
+(gdb) print msg
+$1 = "\000\000\000"
+(gdb) next
+9	  printMessage(msg);
+(gdb) print msg
+$2 = "jon"
+(gdb)
+```
+
+To inspect stack frame, we can use these commands:
+* info frame: info about the frame
+* info args: info about arguments
+* info locals: info about local variables
+
+To demonstrate stack frame inspection, let's restart the gdb session and set breakpoint in the first line of printMessage function (line 4):
+```
+
+```
