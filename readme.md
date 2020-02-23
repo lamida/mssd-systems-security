@@ -17,7 +17,8 @@ Concrete chapters to read will be given at the end of every lecture.
 As a book hoarder and also security enthusiast, I owned all the books above :stuck_out_tongue:.
 
 Lecture Notes:
-* [Week 01](week01.md)
-* [Week 02](week02.md)
-* [Week 03](week03.md)
-* [Week 04](week04.md)
+* [Week 01: Introduction](week01.md)
+* [Week 02: Memory Safety and Protection Mechanisms](week02.md)
+* [Week 03: Network Security](week03.md)
+* [Week 04: Internet Security I](week04.md)
+* [Week 05: Internet Secuirty II](week05.md)
