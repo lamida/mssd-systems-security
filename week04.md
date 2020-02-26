@@ -116,4 +116,4 @@ CAA
 ## Readings
 * [SoK: SSL and HTTPS: Revisiting Past Challenges and Evaluating Certificate Trust Model Enhancements](https://pdfs.semanticscholar.org/1331/5d952a43c391bf4910271fc2582858e86e9e.pdf)
 * [Security vulnerabilities in DNS and DNSSEC](https://pdfs.semanticscholar.org/fbb5/70fd509305d0bec9679bff16ea33630733fb.pdf)
-* [A Survey of BGP Security Issues and Solutions] (https://www.researchgate.net/profile/Jennifer_Rexford/publication/224092573_A_Survey_of_BGP_Security_Issues_and_Solutions/links/00b7d525f3efdb03af000000.pdf)
+* [A Survey of BGP Security Issues and Solutions](https://www.researchgate.net/profile/Jennifer_Rexford/publication/224092573_A_Survey_of_BGP_Security_Issues_and_Solutions/links/00b7d525f3efdb03af000000.pdf)
